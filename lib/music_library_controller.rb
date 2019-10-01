@@ -43,14 +43,14 @@ class MusicLibraryController
     end
   end
   
-  def list_songs
-    Song.all.sort {|artist_one, artist_two| artist_one.name <=> artist_two.name }.each.with_index(1) do |track, index|
+  def list_artists
+    Artist.all.sort {|artist_one, artist_two| artist_one.name <=> artist_two.name }.each.with_index(1) do |track, index|
       puts "#{index}. #{track.artist.name} - #{track.name} - #{track.genre.name}"
     end
   end
   
-  def list_songs
-    Song.all.sort {|artist_one, artist_two| artist_one.name <=> artist_two.name }.each.with_index(1) do |track, index|
+  def list_genres
+    Genre.all.sort {|artist_one, artist_two| artist_one.name <=> artist_two.name }.each.with_index(1) do |track, index|
       puts "#{index}. #{track.artist.name} - #{track.name} - #{track.genre.name}"
     end
   end
